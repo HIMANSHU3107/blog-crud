@@ -29,7 +29,7 @@
     const blogcontainer = document.getElementById('blogcontainer');
 
     function getheading() {
-        fetch('http://localhost:8000/home')
+        fetch('http://localhost:7000/home')
             .then(res => res.json())
             .then(data => {
                 console.log(data);
@@ -60,7 +60,7 @@
     }
 
     function blogremove(btn) {
-        fetch(`http://localhost:8000/delete/${btn.value}`, {
+        fetch(`http://localhost:7000/delete/${btn.value}`, {
             method: "DELETE"
         })
             .then(res => res.json())
