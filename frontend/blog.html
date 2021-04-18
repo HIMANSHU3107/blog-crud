@@ -30,7 +30,7 @@
     let urlParams = new URLSearchParams(window.location.search);
     let id = urlParams.get("id");
 
-    fetch(`http://localhost:8000/blog/${id}`, {
+    fetch(`http://localhost:7000/blog/${id}`, {
         headers: {
             "Content-Type": "application/json"
         },

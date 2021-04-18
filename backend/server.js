@@ -26,9 +26,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cors());
 app.use(express.json());
 
-// Start the server on port 8000
-app.listen(8000, () => {
-    console.log("Server listening on port 8000");
+// Start the server on port 7000
+app.listen(7000, () => {
+    console.log("Server listening on port 7000");
 });
 
 // POST endpoint to create a blog
