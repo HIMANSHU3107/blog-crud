@@ -9,7 +9,7 @@ const mongoose = require("mongoose");
 const Blog = require("./schema");
 
 // MongoDB Database URL
-const uri = '***REMOVED***';
+const uri = 'ADD YOUR OWN URI HERE';
 
 // Connecting to MongoDB
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true });
