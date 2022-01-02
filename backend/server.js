@@ -9,7 +9,11 @@ const mongoose = require("mongoose");
 const Blog = require("./schema");
 
 // MongoDB Database URL
+<<<<<<< HEAD
 const uri = 'mongodb+srv://merncrud:merncrud@cluster0.bjt7a.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+=======
+const uri = 'ADD YOUR OWN URI HERE';
+>>>>>>> a5881e11c6c707673dbe3b4366b7cba781ffb27c
 
 // Connecting to MongoDB
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true });
