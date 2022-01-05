@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-RF0V0HB346"></script>
+            <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-RF0V0HB346');
+        </script>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="keywords" content="torque, iitgn, magazine, technical, torqueiitgn, iit, IIT, IITGN, Gandhinagar">
+
+        <title>VIT Magazine</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet"> 
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" type="text/css" href="CSS/main.css">
+        <link rel="stylesheet" type="text/css" href="CSS/listpage.css">
+        <!-- <link rel=icon href=favicon.ico> -->
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light navbar-style border-bottom fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand navbrand-style" href="index.html">
+                    <!-- <img src="Assets/torque_text.svg" width="90" alt="Torque"> -->
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav mx-auto">
+                        <a class="nav-link px-3 navitem-style" aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link px-3 navitem-style activex" href="Blogs.html">Blogs</a>
+                       
+                    </div>
+                </div>
+                <form class="d-flex">
+                    <button class="btn btn-primary navbutton-style px-4 py-2" id="subscribeButton0" type="button" onclick="subscribe()">Subscribe</button>
+                </form>
+            </div>
+        </nav>
+        <section id = 'title-section'>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 title-section-text">
+                        <h1>Blogs</h1>
+                        <p>Blogs selected from the social media accounts of Torque</p>
+                    </div>
+                    <div class="col-md-8 title-section-img">
+                        <img src="Assets/Blogging-pana.svg" alt="Image couldn't be loaded">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id = 'list-section'>
+            <div id="blogcontainer" class="container"></div>
+         
+            <template id="blogtemplate">
+               
+                <div class="col-md-5 mx-auto">
+             <div class='article-card'  style="background-color: #ffffff;"> 
+                    <img id="imageurl"></img>
+                    <h4 href="blog.html?id=" id="blogheading" class="text-danger text-decoration-none h3 center">Title</h4>
+                    <div id="blogcontent" class="text-secondary text-truncate my-3">Content</div>
+                    <a id="cardurl"> Read More...</a>
+                </div>
+               
+                    <!-- <a id="blogedit" href="/frontend/edit.html?id=" class="btn btn-light btn-sm">✏️</a>
+                    <button id="blogdelete" onclick="blogremove(this)" class="btn btn-light btn-sm"> &#128465;</button> -->
+                </div>
+               
+            </div>
+            </template>
+       
+        </section>
+        
+        <section id = 'contribute-section'>
+            <div class="container contribute-card">
+                <h2>Contribute To Torque</h2>
+                <h3>Do you enjoy writing? Do you wish to contribute articles to Torque?</h3>
+                <h3>Enter your email address below to get in touch with us</h3>
+                <form class="gform" method="POST" data-email="torque@iitgn.ac.in"
+                action="https://script.google.com/macros/s/AKfycbyXJ2YGO6gy9t5tPmMgG6MAPeZFt-Vf9Oi4R7PT69Wx3Ysa0lVO/exec">
+                    <div class="container email-form">
+                        <input type="email" name="email" class="form-control contribute-form mx-auto" aria-describedby="emailHelp" placeholder="Email">
+                        <button type="submit" class="btn btn-primary navbutton-style email-button" onclick="contributeSubmit()">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section id = 'footer-section'>
+            <div class="container">
+                <h2>Got Feedback?</h2>
+                <h3>Let us know</h3>
+                <form class="gform" method="POST" data-email="torque@iitgn.ac.in"
+                action="https://script.google.com/a/iitgn.ac.in/macros/s/AKfycbwkZBowQzQmsoBqFS_ytEUMQ5riNyHw3F9EIPc6gw/exec">
+                    <div class="feedback-form">
+                        <textarea name="feedback" class="form-control form-control-lg mx-auto footer-form" rows="3" placeholder=""></textarea>
+                        <button type="submit" class="btn btn-primary navbutton-style feedback-button" onclick="feedbackSubmit()">Submit</button>
+                    </div>
+                </form>
+            </div>
+            <div class="row footer-text">
+               
+               
+                <div class="col-3">
+                    <h3>OUR TEAM</h3>
+                    <p>Himanshu</p>
+                    <p>Maroti</p>
+                    <p>Harshal</p>
+                    <p>Jagjiwan</p>
+                   
+                </div>
+              
+            </div>
+        </section>
+
+        <section id = 'copyright-section'>
+            <div class="container">
+                <p>&copy; Torque, 2021</p>
+            </div>
+        </section>
+
+        <!-- JavaScript Custom -->
+        <script src="JS/listpage.js"></script>
+        <script src="JS/main.js"></script>
+
+        <script src="https://kit.fontawesome.com/b2c5fc1abf.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script data-cfasync="false" type="text/javascript" src="JS/form-submission-handler.js"></script>
+    </body>
+    <script>
+        const template = document.getElementById('blogtemplate');
+        const blogcontainer = document.getElementById('blogcontainer');
+       // const cnt = 0;
+        function getheading() {
+            fetch('https://magazine-site-admin.herokuapp.com/home')
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    
+                    data.forEach(element => {
+                        let clone = template.content.cloneNode(true);
+                      
+                        // Heading
+                        let heading = clone.querySelector("#blogheading");
+                        heading.textContent = element.title;
+                        heading.href += element._id;
+    
+                        // Content
+                        let content = clone.querySelector("#blogcontent");
+                        content.textContent = element.content;
+    
+                         // image
+                         let imageurl = clone.querySelector("#imageurl");
+                        imageurl.src = element.imageurl;
+                        console.log(element.imageurl);
+
+                          // cardurl
+                          let cardurl = clone.querySelector("#cardurl");
+                        cardurl.href = element.cardurl;
+    
+                     
+                        blogcontainer.appendChild(clone);
+                     
+                     
+                    });
+                })
+                .catch((err) => console.error(err));
+        }
+    
+        function blogremove(btn) {
+            fetch(`https://magazine-site-admin.herokuapp.com/delete/${btn.value}`, {
+                method: "DELETE"
+            })
+                .then(res => res.json())
+                .then(res => {
+                    console.log(res._id);
+                    location.reload();
+                })
+                .catch(err => console.error(err));
+        }
+    
+        getheading();
+    </script>
+</html>
